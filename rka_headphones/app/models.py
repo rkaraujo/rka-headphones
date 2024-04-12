@@ -41,6 +41,7 @@ class Eartip(models.Model):
     def __str__(self):
         return f"{self.name} {self.size}"
 
+
 class HeadphoneCombination(models.Model):
     headphone = models.ForeignKey(Headphone, on_delete=models.CASCADE)
     cable = models.ForeignKey(Cable, on_delete=models.CASCADE)
@@ -49,4 +50,4 @@ class HeadphoneCombination(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.headphone.name} / {self.cable.name} / {self.eartip.name}"
+        return f"{self.headphone.name} / {self.cable.name} / {self.eartip.name} {self.eartip.size}"
