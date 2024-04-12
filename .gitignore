@@ -1,0 +1,7 @@
+.idea
+
+# Ignore venv files
+/env/
+
+# Ignore database files
+*.sqlite3
